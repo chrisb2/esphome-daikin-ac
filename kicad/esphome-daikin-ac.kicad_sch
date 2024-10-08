@@ -3,7 +3,7 @@
 	(generator "eeschema")
 	(generator_version "8.0")
 	(uuid "a5d75336-ee10-48f8-8953-25db65ee2440")
-	(paper "A5")
+	(paper "User" 200 130)
 	(title_block
 		(title "Daikin AC Controller for ESPHome")
 		(date "2024-10-07")
@@ -615,14 +615,14 @@
 				)
 			)
 		)
-		(symbol "Transistor_BJT:FFB2222A"
+		(symbol "Transistor_BJT:PN2222A"
 			(pin_names
 				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "Q"
-				(at 5.08 1.27 0)
+				(at 5.08 1.905 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -630,8 +630,8 @@
 					(justify left)
 				)
 			)
-			(property "Value" "FFB2222A"
-				(at 5.08 -1.27 0)
+			(property "Value" "PN2222A"
+				(at 5.08 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -639,16 +639,28 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_TO_SOT_SMD:SOT-363_SC-70-6"
-				(at 5.08 2.54 0)
+			(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+				(at 5.08 -1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.onsemi.com/pub/Collateral/PN2222-D.PDF"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://www.onsemi.com/pub/Collateral/MMPQ2222A-D.pdf"
+			(property "Description" "1A Ic, 40V Vce, NPN Transistor, General Purpose Transistor, TO-92"
 				(at 0 0 0)
 				(effects
 					(font
@@ -657,7 +669,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "600mA IC, 40V Vce, Dual NPN/NPN Transistors, SOT-363"
+			(property "ki_keywords" "NPN Transistor"
 				(at 0 0 0)
 				(effects
 					(font
@@ -666,15 +678,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "NPN/NPN Transistor"
+			(property "ki_fp_filters" "TO?92*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -683,19 +687,10 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "SOT?363*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "FFB2222A_0_1"
+			(symbol "PN2222A_0_1"
 				(polyline
 					(pts
-						(xy 0.635 0) (xy -2.54 0)
+						(xy 0 0) (xy 0.635 0)
 					)
 					(stroke
 						(width 0)
@@ -707,7 +702,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0.635 0.635) (xy 2.54 2.54)
+						(xy 2.54 -2.54) (xy 0.635 -0.635)
 					)
 					(stroke
 						(width 0)
@@ -719,7 +714,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0.635 -0.635) (xy 2.54 -2.54) (xy 2.54 -2.54)
+						(xy 2.54 2.54) (xy 0.635 0.635)
 					)
 					(stroke
 						(width 0)
@@ -743,7 +738,19 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 -1.778) (xy 1.778 -1.27) (xy 2.286 -2.286) (xy 1.27 -1.778) (xy 1.27 -1.778)
+						(xy 2.413 -2.413) (xy 1.905 -1.905) (xy 1.905 -1.905)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.143 -1.651) (xy 1.651 -1.143) (xy 2.159 -2.159) (xy 1.143 -1.651) (xy 1.143 -1.651)
 					)
 					(stroke
 						(width 0)
@@ -765,11 +772,11 @@
 					)
 				)
 			)
-			(symbol "FFB2222A_1_1"
+			(symbol "PN2222A_1_1"
 				(pin passive line
 					(at 2.54 -5.08 90)
 					(length 2.54)
-					(name "E1"
+					(name "E"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -786,8 +793,8 @@
 				)
 				(pin input line
 					(at -5.08 0 0)
-					(length 2.54)
-					(name "B1"
+					(length 5.08)
+					(name "B"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -805,27 +812,7 @@
 				(pin passive line
 					(at 2.54 5.08 270)
 					(length 2.54)
-					(name "C1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "FFB2222A_2_1"
-				(pin passive line
-					(at 2.54 5.08 270)
-					(length 2.54)
-					(name "C2"
+					(name "C"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -833,42 +820,6 @@
 						)
 					)
 					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 -5.08 90)
-					(length 2.54)
-					(name "E2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "B2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1702,12 +1653,120 @@
 				)
 			)
 		)
+		(symbol "power:PWR_FLAG"
+			(power)
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#FLG"
+				(at 0 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "flag power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "PWR_FLAG_0_0"
+				(pin power_out line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+		)
 	)
 	(junction
 		(at 157.48 38.1)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "714da456-5980-42e3-a87e-242519acfd7e")
+	)
+	(junction
+		(at 132.08 40.64)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "79459197-b362-405c-ac0d-b013ab83ecf1")
+	)
+	(junction
+		(at 128.27 30.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e295db59-2559-40b1-b01c-9baf5d03fdb7")
 	)
 	(junction
 		(at 148.59 48.26)
@@ -1718,10 +1777,6 @@
 	(no_connect
 		(at 124.46 44.45)
 		(uuid "12c58a2a-0fb8-4d75-b738-bc10ab09d906")
-	)
-	(no_connect
-		(at 74.93 44.45)
-		(uuid "22d67fdc-e912-4648-a6f7-c773a01d1093")
 	)
 	(no_connect
 		(at 74.93 36.83)
@@ -1746,6 +1801,10 @@
 	(no_connect
 		(at 74.93 40.64)
 		(uuid "54fd65e2-209a-4b51-903d-88f7a4943ddb")
+	)
+	(no_connect
+		(at 74.93 48.26)
+		(uuid "7235b099-dbbc-4198-b710-3aab68001c42")
 	)
 	(no_connect
 		(at 74.93 52.07)
@@ -1787,6 +1846,16 @@
 	)
 	(wire
 		(pts
+			(xy 128.27 30.48) (xy 128.27 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2475f814-5d90-4da2-ae9b-08314f2d1562")
+	)
+	(wire
+		(pts
 			(xy 49.53 66.04) (xy 52.07 66.04)
 		)
 		(stroke
@@ -1807,7 +1876,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 36.83) (xy 128.27 35.56)
+			(xy 128.27 36.83) (xy 128.27 30.48)
 		)
 		(stroke
 			(width 0)
@@ -1837,13 +1906,23 @@
 	)
 	(wire
 		(pts
+			(xy 71.12 44.45) (xy 74.93 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4fb65a3d-db40-41f5-be19-c71f09b541ba")
+	)
+	(wire
+		(pts
 			(xy 124.46 40.64) (xy 132.08 40.64)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5e6a8fc7-6097-4903-9dba-3fc5d384e9b4")
+		(uuid "58f44644-1f38-4478-a653-ba1f26f9f0e3")
 	)
 	(wire
 		(pts
@@ -1925,16 +2004,6 @@
 		)
 		(uuid "e9987501-a027-45ea-b85c-54e3ce0de5ed")
 	)
-	(wire
-		(pts
-			(xy 71.12 48.26) (xy 74.93 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ee13e641-54c7-4bdd-8959-80d34021402c")
-	)
 	(global_label "TEMP"
 		(shape input)
 		(at 147.32 48.26 180)
@@ -1981,7 +2050,7 @@
 	)
 	(global_label "LED"
 		(shape input)
-		(at 71.12 48.26 180)
+		(at 71.12 44.45 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1991,7 +2060,7 @@
 		)
 		(uuid "eda83065-9c99-4b95-9031-72b40fc0539d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 64.6877 48.26 0)
+			(at 64.6877 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2156,6 +2225,213 @@
 			(project ""
 				(path "/a5d75336-ee10-48f8-8953-25db65ee2440"
 					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 41.91 38.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "45243796-9e7b-49f1-b68d-86c4d89e89cf")
+		(property "Reference" "#PWR02"
+			(at 41.91 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 41.91 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 41.91 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 41.91 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 41.91 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2a4b5a22-369d-4276-869b-ff074900732d")
+		)
+		(instances
+			(project ""
+				(path "/a5d75336-ee10-48f8-8953-25db65ee2440"
+					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 132.08 40.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "659ac35f-9649-4fea-8a78-b26474a691b0")
+		(property "Reference" "#FLG01"
+			(at 132.08 38.735 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 136.652 36.576 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 132.08 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 132.08 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 132.08 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "454347ed-4fc6-4cc4-870c-23413fb02989")
+		)
+		(instances
+			(project ""
+				(path "/a5d75336-ee10-48f8-8953-25db65ee2440"
+					(reference "#FLG01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:PN2222A")
+		(at 44.45 66.04 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "663a076b-41ab-45f7-b6ec-5e06c7d5d077")
+		(property "Reference" "Q1"
+			(at 39.37 64.7699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "PN2222A"
+			(at 39.37 67.3099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+			(at 39.37 67.945 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/PN2222-D.PDF"
+			(at 44.45 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "1A Ic, 40V Vce, NPN Transistor, General Purpose Transistor, TO-92"
+			(at 44.45 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "fdae3ea6-c896-482a-9a77-f0be184807a9")
+		)
+		(pin "3"
+			(uuid "04197082-6e69-43b9-b729-8c5648073dc2")
+		)
+		(pin "1"
+			(uuid "761becaa-121a-44d2-a8f9-d7a6e87672b8")
+		)
+		(instances
+			(project ""
+				(path "/a5d75336-ee10-48f8-8953-25db65ee2440"
+					(reference "Q1")
 					(unit 1)
 				)
 			)
@@ -2439,16 +2715,15 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 128.27 35.56 0)
+		(at 128.27 29.21 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "a9908002-01e2-4139-ad29-e6c8421e1e0b")
 		(property "Reference" "#PWR06"
-			(at 128.27 39.37 0)
+			(at 128.27 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2457,7 +2732,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 128.27 30.48 0)
+			(at 128.27 24.638 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2465,7 +2740,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 128.27 35.56 0)
+			(at 128.27 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2474,7 +2749,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 128.27 35.56 0)
+			(at 128.27 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2483,7 +2758,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 128.27 35.56 0)
+			(at 128.27 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2504,88 +2779,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:FFB2222A")
-		(at 44.45 66.04 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "aa976433-9ff8-4843-8455-bcb6cbb97247")
-		(property "Reference" "Q1"
-			(at 39.37 64.7699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "P2N2222"
-			(at 39.37 67.3099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-363_SC-70-6"
-			(at 39.37 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/MMPQ2222A-D.pdf"
-			(at 44.45 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "600mA IC, 40V Vce, Dual NPN/NPN Transistors, SOT-363"
-			(at 44.45 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "5"
-			(uuid "3cb3bd1a-f8e5-4ee9-b59c-e4afbf0f0495")
-		)
-		(pin "6"
-			(uuid "31361049-c436-4eea-9380-58cf9fe382a4")
-		)
-		(pin "3"
-			(uuid "97ef3276-7245-43cd-8dd8-596bb15c6771")
-		)
-		(pin "4"
-			(uuid "3b458559-beee-4877-acbd-106720dbe2c9")
-		)
-		(pin "1"
-			(uuid "e09943e2-2370-4b39-9981-3e1a40a779d7")
-		)
-		(pin "2"
-			(uuid "acc1bbdf-fae4-466d-a5e1-8e0d83f6ea34")
-		)
-		(instances
-			(project ""
-				(path "/a5d75336-ee10-48f8-8953-25db65ee2440"
-					(reference "Q1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Xiao ESP32C3:MOUDLE-SEEEDUINO-XIAO-ESP32C3")
 		(at 100.33 48.26 0)
 		(unit 1)
@@ -2593,10 +2786,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "bc88fcae-bbbc-41e5-ba6f-c3ab3a5bd5d7")
 		(property "Reference" "U1"
-			(at 99.695 29.21 0)
+			(at 98.806 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2604,7 +2796,7 @@
 			)
 		)
 		(property "Value" "XIAO ESP32C3"
-			(at 99.695 31.75 0)
+			(at 99.06 39.624 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2691,17 +2883,17 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+5V")
-		(at 41.91 38.1 0)
+		(lib_id "power:PWR_FLAG")
+		(at 128.27 30.48 270)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e707e4ee-f25e-4788-bbb6-9c13493e6cf9")
-		(property "Reference" "#PWR02"
-			(at 41.91 41.91 0)
+		(uuid "e1dc94bc-e96f-4d46-9d4b-951106b249e8")
+		(property "Reference" "#FLG02"
+			(at 130.175 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2709,8 +2901,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5V"
-			(at 41.91 33.02 0)
+		(property "Value" "PWR_FLAG"
+			(at 136.144 30.734 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2718,7 +2910,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 41.91 38.1 0)
+			(at 128.27 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2726,8 +2918,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 41.91 38.1 0)
+		(property "Datasheet" "~"
+			(at 128.27 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2735,8 +2927,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 41.91 38.1 0)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 128.27 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2745,12 +2937,77 @@
 			)
 		)
 		(pin "1"
-			(uuid "0499a721-9ddd-47c9-b10a-abd2581c679b")
+			(uuid "f7a66461-5cf4-4762-aa2f-a6883ed1380d")
 		)
 		(instances
 			(project ""
 				(path "/a5d75336-ee10-48f8-8953-25db65ee2440"
-					(reference "#PWR02")
+					(reference "#FLG02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 132.08 40.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "eab37bf4-863b-47e8-a639-abfe90f297c0")
+		(property "Reference" "#PWR05"
+			(at 132.08 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 132.08 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 132.08 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 132.08 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 132.08 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a8ed4af7-2870-4bfc-a0d5-606e6da9fa53")
+		)
+		(instances
+			(project ""
+				(path "/a5d75336-ee10-48f8-8953-25db65ee2440"
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -2817,72 +3074,6 @@
 			(project ""
 				(path "/a5d75336-ee10-48f8-8953-25db65ee2440"
 					(reference "#PWR03")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 132.08 40.64 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f3476c04-cb53-45b6-b6a0-8166c0d69538")
-		(property "Reference" "#PWR05"
-			(at 132.08 34.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 132.08 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 132.08 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 132.08 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 132.08 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "4e8a7268-541d-4435-a133-0b0d989c6e93")
-		)
-		(instances
-			(project ""
-				(path "/a5d75336-ee10-48f8-8953-25db65ee2440"
-					(reference "#PWR05")
 					(unit 1)
 				)
 			)
