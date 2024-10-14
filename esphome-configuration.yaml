@@ -1,6 +1,6 @@
 substitutions:
   name: esphome-web-25cd00
-  friendly_name: Living Room AC
+  friendly_name: esphome-xiao-esp32c3
 
 esphome:
   name: ${name}
@@ -17,7 +17,7 @@ esp32:
     type: arduino
 
 remote_transmitter:
-  id: daikin
+  id: daikin_ac
   pin: GPIO04
   carrier_duty_percent: 50%
 
@@ -25,10 +25,22 @@ climate:
   - platform: heatpumpir
     name: "Living Room AC"
     protocol: daikin
+    transmitter_id: daikin_ac
     max_temperature: 30
     min_temperature: 10
     vertical_default: down
     horizontal_default: middle
+    sensor: living_room
+
+one_wire:
+  - platform: gpio
+    pin: GPIO10
+
+sensor:
+  - platform: dallas_temp
+    id: living_room
+    name: None
+    update_interval: 60s
 
 # Enable logging
 logger:
