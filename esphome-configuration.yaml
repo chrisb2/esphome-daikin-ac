@@ -1,6 +1,6 @@
 substitutions:
   name: esphome-web-25cd00
-  friendly_name: esphome-xiao-esp32c3
+  friendly_name: Living Room Temperature
 
 esphome:
   name: ${name}
@@ -18,7 +18,7 @@ esp32:
 
 remote_transmitter:
   id: daikin_ac
-  pin: GPIO04
+  pin: GPIO10
   carrier_duty_percent: 50%
 
 climate:
@@ -34,7 +34,8 @@ climate:
 
 one_wire:
   - platform: gpio
-    pin: GPIO10
+    pin: GPIO4
+    id: dallas
 
 sensor:
   - platform: dallas_temp
